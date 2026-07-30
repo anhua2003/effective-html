@@ -4,26 +4,35 @@ Five focused skills for creating useful, self-contained HTML artifacts, from low
 
 The collection is opinionated about clarity, accessibility, and verification. It is not tied to one palette, typography stack, component system, or diagram style. Each artifact follows the user's direction first, then the project's established language, then the subject itself.
 
+https://github.com/user-attachments/assets/24306977-7f30-44c9-9bff-55f901d557b0
+
+<p align="center">
+  <a href="https://github.com/backnotprop/plannotator">
+    <img src="./star-plannotator.svg" width="340" alt="Star Plannotator on GitHub">
+  </a>
+</p>
+<p align="center">
+Render and annotate local HTML with <a href="https://github.com/backnotprop/plannotator">Plannotator</a>.
+</p>
+
 ## Choose a skill
 
 | Skill | Use it for |
 | --- | --- |
 | [`html`](skills/html/SKILL.md) | Broad HTML requests, mixed artifacts, reports, explainers, presentations, landing pages, tools, and routing to a specialist |
 | [`html-wireframe`](skills/html-wireframe/SKILL.md) | Low-fidelity layout directions that test content, hierarchy, navigation, flows, and responsive structure |
-| [`html-prototype`](skills/html-prototype/SKILL.md) | Styled mockups and working prototypes with realistic states, interaction, keyboard support, and responsive behavior |
+| [`html-prototype`](skills/html-prototype/SKILL.md) | Working prototypes with realistic states, interaction, keyboard support, and responsive behavior |
 | [`html-plan`](skills/html-plan/SKILL.md) | Plans, roadmaps, rollouts, and implementation sequences that preserve source commitments |
 | [`html-diagram`](skills/html-diagram/SKILL.md) | Architecture, sequence, process, state, hierarchy, timeline, and system diagrams |
 
-A mockup is a noninteractive fidelity mode inside `html-prototype`. There is no separate `html-mockup` skill.
+## One brief, two stages
 
-## One brief, three stages
+The [release-readiness example](examples/release-readiness/README.md) carries the same product brief from structural exploration to working interaction. Both artifacts are standalone HTML files that open without build tooling.
 
-The [release-readiness example](examples/release-readiness/README.md) carries the same product brief through structure, visual fidelity, and interaction. Every stage is preserved as a standalone HTML file that opens without build tooling.
-
-| Wireframe | Mockup | Prototype |
-| --- | --- | --- |
-| [![Low-fidelity release wireframe](examples/release-readiness/screenshots/wireframe-desktop.png)](examples/release-readiness/wireframe.html) | [![Styled release mockup](examples/release-readiness/screenshots/mockup-desktop.png)](examples/release-readiness/mockup.html) | [![Interactive release prototype](examples/release-readiness/screenshots/prototype-desktop.png)](examples/release-readiness/prototype.html) |
-| Decide what belongs on the screen and compare structural directions. | Judge hierarchy, visual language, and responsive composition. | Test the blocked-to-ready flow, feedback, recovery, and product boundary. |
+| Wireframe | Prototype |
+| --- | --- |
+| [![Low-fidelity release wireframe](examples/release-readiness/screenshots/wireframe-desktop.png)](examples/release-readiness/wireframe.html) | [![Interactive release prototype](examples/release-readiness/screenshots/prototype-desktop.png)](examples/release-readiness/prototype.html) |
+| Decide what belongs on the screen and compare structural directions. | Test the blocked-to-ready flow, feedback, recovery, and product boundary. |
 
 Read the canonical Plannotator guide, [HTML wireframes and prototypes for coding agents](https://docs.plannotator.ai/learn/code-context/html-wireframes-and-prototypes-for-coding-agents), for the review questions that belong at each stage.
 
@@ -47,8 +56,6 @@ Invoke a skill directly:
 
 ```text
 Use $html-wireframe to explore three responsive layouts for this checkout brief.
-
-Use $html-prototype in mockup mode to apply our existing design system to the approved wireframe.
 
 Use $html-prototype to make the checkout flow work, including validation, loading, failure, success, keyboard, and mobile states.
 ```
@@ -75,7 +82,6 @@ The skills separate creative freedom from reliability:
 
 - Visual direction comes from the conversation, project, audience, and subject.
 - Wireframes stay intentionally unfinished so reviewers focus on structure.
-- Mockups add a visual system without pretending to test behavior.
 - Prototypes implement one credible flow and its relevant states.
 - Plans preserve source commitments.
 - Diagrams choose a visual model and rendering method that fit the relationship being explained.
@@ -101,21 +107,11 @@ examples/
     ├── brief.md
     ├── states.md
     ├── wireframe.html
-    ├── mockup.html
     ├── prototype.html
     └── screenshots/
 ```
 
 This project was inspired by Thariq Shihipar's [The unreasonable effectiveness of HTML](https://thariqs.github.io/html-effectiveness).
-
-<p align="center">
-  <a href="https://github.com/backnotprop/plannotator">
-    <img src="./star-plannotator.svg" width="340" alt="Star Plannotator on GitHub">
-  </a>
-</p>
-<p align="center">
-Render and annotate local HTML with <a href="https://github.com/backnotprop/plannotator">Plannotator</a>.
-</p>
 
 <p align="center">
   <a href="https://github.com/plannotator/tot">
