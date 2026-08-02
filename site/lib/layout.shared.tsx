@@ -13,7 +13,14 @@ export function baseOptions(): BaseLayoutProps {
     },
     links: [
       {
-        text: "Catalog",
+        text: (
+          <span className="docs-catalog-link">
+            <span className="docs-catalog-star" aria-hidden="true">
+              ★
+            </span>
+            Catalog
+          </span>
+        ),
         url: "/catalog",
       },
       {

@@ -150,6 +150,18 @@ strong,
   font-family: var(--font-display);
 }
 
+.docs-catalog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.docs-catalog-star {
+  color: var(--green);
+  font-size: var(--text-label);
+  line-height: 1;
+}
+
 .catalog-page {
   overflow: clip;
   background: var(--ink);
