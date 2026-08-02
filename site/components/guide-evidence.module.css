@@ -155,6 +155,108 @@
   border-top: 1px solid var(--color-fd-foreground);
 }
 
+.sources {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+  width: min(54rem, calc(100vw - 2rem));
+  margin-block: 1.25rem 2.75rem;
+  border-top: 1px solid
+    color-mix(in srgb, var(--color-fd-foreground) 32%, transparent);
+}
+
+.sources :global(a) {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.8rem;
+  align-items: center;
+  min-height: 5.5rem;
+  padding: 1rem 0.75rem 1rem 0.25rem;
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--color-fd-foreground) 32%, transparent);
+  color: var(--color-fd-foreground);
+  text-decoration: none;
+  transition: background-color var(--duration-fast) ease-out;
+}
+
+.sources :global(a)::before {
+  width: 0.65rem;
+  height: 0.65rem;
+  background: var(--cobalt);
+  content: "";
+}
+
+.sources :global(a:nth-child(2))::before {
+  border-radius: 50%;
+  background: var(--green);
+}
+
+.sources :global(a:nth-child(3))::before {
+  background: var(--coral);
+  transform: rotate(45deg);
+}
+
+.sources :global(a:nth-child(4))::before {
+  background: var(--lilac);
+}
+
+.sources :global(a)::after {
+  width: 1rem;
+  height: 1rem;
+  background: currentColor;
+  content: "";
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7'/%3E%3Cpath d='M7 7h10v10'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7'/%3E%3Cpath d='M7 7h10v10'/%3E%3C/svg%3E") center / contain no-repeat;
+  transition: transform var(--duration-fast) ease-out;
+}
+
+.sources :global([data-source-copy]),
+.sources :global(strong),
+.sources :global(small) {
+  display: block;
+}
+
+.sources :global([data-source-copy]) {
+  min-width: 0;
+}
+
+.sources :global(strong) {
+  color: var(--cobalt);
+  font-family: var(--font-display);
+  font-size: var(--text-label);
+  letter-spacing: -0.015em;
+}
+
+.sources :global(small) {
+  margin-top: 0.2rem;
+  color: var(--color-fd-muted-foreground);
+  font-size: var(--text-label-compact);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.sources :global(a:hover) {
+  background: color-mix(
+    in srgb,
+    var(--color-fd-foreground) 4%,
+    transparent
+  );
+}
+
+.sources :global(a:hover)::after {
+  transform: translate(0.2rem, -0.2rem);
+}
+
+.sources :global(a:hover strong) {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.sources :global(a:focus-visible) {
+  outline: 2px solid var(--color-fd-ring);
+  outline-offset: 4px;
+}
+
 .chapterEvidence {
   --evidence-accent: var(--cobalt);
   width: min(54rem, calc(100vw - 2rem));
@@ -468,9 +570,14 @@
   color: var(--lilac);
 }
 
+:global(.dark) .sources :global(strong) {
+  color: var(--lilac);
+}
+
 @media (max-width: 1280px) {
   .workbench,
   .handoff,
+  .sources,
   .chapterEvidence {
     width: 100%;
   }
@@ -563,10 +670,18 @@
   .handoff a {
     min-height: 4.75rem;
   }
+
+  .sources {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    margin-block: 1rem 2.25rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .handoff a > svg:last-child,
+  .sources :global(a),
+  .sources :global(a)::after,
   .next svg {
     transition: none;
   }

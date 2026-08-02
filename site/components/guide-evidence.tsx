@@ -3,7 +3,7 @@
 import { ArrowRight, ArrowUpRight, FileCode2, Wrench } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import type { CSSProperties, KeyboardEvent } from "react";
+import type { CSSProperties, KeyboardEvent, ReactNode } from "react";
 import { useRef, useState } from "react";
 import styles from "./guide-evidence.module.css";
 
@@ -441,6 +441,15 @@ export function GuideHandoff({
           </Link>
         );
       })}
+    </nav>
+  );
+}
+
+/** Render a compact, visibly interactive source ledger inside guide prose. */
+export function GuideSources({ children }: { children: ReactNode }) {
+  return (
+    <nav className={styles.sources} aria-label="Sources behind this guide">
+      {children}
     </nav>
   );
 }

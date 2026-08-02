@@ -5,6 +5,7 @@ import {
   GuideChapterEvidence,
   GuideHandoff,
   GuideNext,
+  GuideSources,
 } from "@/components/guide-evidence";
 
 export function getMDXComponents(components?: MDXComponents) {
@@ -14,6 +15,7 @@ export function getMDXComponents(components?: MDXComponents) {
     GuideChapterEvidence,
     GuideHandoff,
     GuideNext,
+    GuideSources,
     ...components,
   } satisfies MDXComponents;
 }
