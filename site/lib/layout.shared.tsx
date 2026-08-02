@@ -17,10 +17,6 @@ export function baseOptions(): BaseLayoutProps {
         url: "/catalog",
       },
       {
-        text: "Examples",
-        url: "/examples",
-      },
-      {
         text: "GitHub",
         url: "https://github.com/plannotator/effective-html",
         external: true,

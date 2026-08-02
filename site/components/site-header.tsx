@@ -10,7 +10,6 @@ import { useEffect, useRef, useState } from "react";
 const navLinks = [
   { href: "/catalog", label: "Catalog" },
   { href: "/docs", label: "Guide" },
-  { href: "/examples", label: "Examples" },
 ];
 
 export function SiteHeader() {
