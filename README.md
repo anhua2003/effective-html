@@ -18,7 +18,7 @@ thin because the context and the artifact do the work.
 > You can use this repo without installing anything. Treat it as a reference
 > first and an installable skill collection second. Read the patterns, borrow
 > what fits, and ask your agent for the artifact directly. Install a skill only
-> when you want a recurring workflow or shared defaults.
+> when you want a recurring workflow or shared defaults. Visit <a href="https://www.effectivehtml.com/">Effective HTML Website/Guide</a> for more details.
 
 https://github.com/user-attachments/assets/24306977-7f30-44c9-9bff-55f901d557b0
 
@@ -44,7 +44,7 @@ The repo includes six optional skills for pragmatic visual artifacts.
 | [`html-plan`](skills/html-plan/SKILL.md) | Plans, roadmaps, rollouts, and implementation sequences that preserve source commitments |
 | [`html-diagram`](skills/html-diagram/SKILL.md) | Architecture, sequence, process, state, hierarchy, timeline, and system diagrams |
 
-Visit: <a href="https://www.effectivehtml.com/">Effective HTML Website/Guide</a> for more details.
+
 
 
 ## Install
