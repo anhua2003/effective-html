@@ -4,9 +4,7 @@
 
 # Effective HTML
 
-Five focused skills for creating useful, self-contained HTML artifacts, from low-fidelity wireframes to working interactive prototypes.
-
-The collection is opinionated about clarity, accessibility, and verification. It is not tied to one palette, typography stack, component system, or diagram style. Each artifact follows the user's direction first, then the project's established language, then the subject itself.
+Five focused skills for creating useful, self-contained HTML artifacts, from low-fidelity wireframes to working interactive prototypes & animated architecture.
 
 https://github.com/user-attachments/assets/24306977-7f30-44c9-9bff-55f901d557b0
 
