@@ -19,6 +19,9 @@ Render and annotate local HTML with <a href="https://github.com/backnotprop/plan
 
 ## Choose a skill
 
+HTML skills for pragmatic visual artifacts
+
+
 | Skill | Use it for |
 | --- | --- |
 | [`html`](skills/html/SKILL.md) | Broad HTML requests, mixed artifacts, reports, explainers, presentations, landing pages, tools, and routing to a specialist |
