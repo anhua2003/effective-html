@@ -4,8 +4,7 @@
 
 # Effective HTML
 
-Effective HTML is a field guide and reference collection for creating useful,
-self-contained HTML artifacts with agents.
+Focused agent skills for creating useful, self-contained HTML artifacts, from low-fidelity wireframes to working interactive prototypes.
 
 ## Fat artifacts + fat context
 
