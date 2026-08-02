@@ -72,7 +72,7 @@ Use $html-wireframe to explore three responsive layouts for this checkout brief.
 
 Use $html-prototype to make the checkout flow work, including validation, loading, failure, success, keyboard, and mobile states.
 
-Use $design-artifact with $html-diagram to give this architecture explainer a visual direction rooted in the system it describes.
+Use $design-artifact to follow this product's visual language and $html-diagram to turn the attached architecture brief into an interactive system map.
 ```
 
 `$html` can route a broad request, while `$design-artifact` can supply creative direction across artifact types. Call a specialist directly when you know the artifact type. Each specialist remains independently usable when invoked directly.

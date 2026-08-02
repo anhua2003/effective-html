@@ -3,6 +3,7 @@ import { source } from "@/lib/source";
 import {
   DocsBody,
   DocsDescription,
+  MarkdownCopyButton,
   DocsPage,
   DocsTitle,
 } from "fumadocs-ui/layouts/docs/page";
@@ -27,6 +28,9 @@ export default async function Page({ params }: PageProps) {
       {page.data.description ? (
         <DocsDescription>{page.data.description}</DocsDescription>
       ) : null}
+      <div className="flex items-center border-b pt-2 pb-6">
+        <MarkdownCopyButton markdownUrl={`${page.url}.md`} />
+      </div>
       <DocsBody>
         <MDX components={getMDXComponents()} />
       </DocsBody>

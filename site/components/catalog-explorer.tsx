@@ -478,7 +478,7 @@ export function CatalogExplorer() {
               <p>
                 {collection === "mockups"
                   ? "Three responsive, interactive HTML studies that borrow the information density and interaction grammar of familiar products."
-                  : "Readiness studies and high-fidelity product-interface studies, built as responsive, interactive HTML. Each one is the artifact, not a screenshot standing in for it."}
+                  : "Agents can build high-fidelity HTML alternatives that match the real product. Open them at realistic screen sizes, try the interactions, and compare possible changes before touching production."}
               </p>
             </header>
             <div className={styles.nativeExamples}>

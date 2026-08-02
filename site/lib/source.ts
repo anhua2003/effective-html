@@ -3,6 +3,11 @@ import { loader } from "fumadocs-core/source";
 
 const docs = defineDocs({
   dir: "content/docs",
+  docs: {
+    postprocess: {
+      includeProcessedMarkdown: true,
+    },
+  },
 });
 
 export const source = loader({
