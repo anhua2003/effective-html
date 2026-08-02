@@ -68,9 +68,8 @@ export default function HomePage() {
             </p>
             <h2>HTML for thinking with agents.</h2>
             <p className="hero-intro">
-              A visual field guide to choosing and making the right artifact:
-              from rough wireframes to working prototypes, diagrams, and small
-              purpose-built interfaces.
+              A reference site showcasing the visual and interactive HTML
+              artifacts you can create with agents.
             </p>
             <div className="hero-actions">
               <Link className="button button-primary" href="/docs">
