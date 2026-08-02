@@ -20,7 +20,7 @@ Render and annotate local HTML with <a href="https://github.com/backnotprop/plan
 
 ## Choose a skill
 
-HTML skills for pragmatic visual artifacts. Visit: <a href="https://www.effectivehtml.com/">Effective HTML Website/Guide</a> for more details.
+HTML skills for pragmatic visual artifacts. 
 
 
 | Skill | Use it for |
@@ -30,6 +30,9 @@ HTML skills for pragmatic visual artifacts. Visit: <a href="https://www.effectiv
 | [`html-prototype`](skills/html-prototype/SKILL.md) | Working prototypes with realistic states, interaction, keyboard support, and responsive behavior |
 | [`html-plan`](skills/html-plan/SKILL.md) | Plans, roadmaps, rollouts, and implementation sequences that preserve source commitments |
 | [`html-diagram`](skills/html-diagram/SKILL.md) | Architecture, sequence, process, state, hierarchy, timeline, and system diagrams |
+
+Visit: <a href="https://www.effectivehtml.com/">Effective HTML Website/Guide</a> for more details.
+
 
 ## Install
 
