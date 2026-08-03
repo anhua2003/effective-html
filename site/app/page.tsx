@@ -146,9 +146,8 @@ export default function HomePage() {
         <div className="why-statement">
           <h2>Use HTML when there’s a lot to understand.</h2>
           <p>
-            Markdown is often enough. HTML becomes useful when a reader needs
-            to compare structure, manipulate state, inspect relationships, or
-            participate in the idea.
+            Markdown is often enough. Use HTML when you need to compare
+            designs, change states, follow a flow, or try the thing yourself.
           </p>
           <Link className="text-link" href="/docs/why-html">
             Why HTML?
