@@ -10,7 +10,8 @@ Focused agent skills for creating useful, self-contained HTML artifacts, from lo
 
 Modern models can do a lot. Give them plenty of useful references and use
 artifacts to show what you mean. HTML can visualize almost anything, often more
-clearly than a wall of text.
+clearly than a wall of text. Your prompt can simply point to the artifacts,
+repositories, and folders that carry the context.
 
 > [!NOTE]
 > You can use this repo without installing anything. Treat it as a reference
