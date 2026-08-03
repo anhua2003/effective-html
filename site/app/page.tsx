@@ -88,10 +88,10 @@ export default function HomePage() {
 
       <section className="catalog-paper artifact-catalog">
         <div className="section-heading">
-          <h2>Match the artifact to the decision.</h2>
+          <h2>Visuals for the work of building products.</h2>
           <p>
-            HTML earns its place when spatial, visual, comparative, or
-            interactive expression makes the work easier to understand.
+            Use HTML to compare options, explain systems, test interactions,
+            and plan implementation.
           </p>
         </div>
 
