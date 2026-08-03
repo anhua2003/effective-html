@@ -196,7 +196,7 @@ The system has two coordinated registers. The Catalog opens as a compact Ink fol
 
 Imperfection is controlled and material, never careless. Paper tooth, slight sheet rotation, tape, overlap, and offset depth live around artifact surfaces, while text, controls, navigation, and diagrams stay crisp. The resulting character is editorial rather than institutional, playful inside the examples, and restrained in the surrounding chrome.
 
-Catalog utility stays practical inside that expression. Search, collection, and subject controls remain persistent and compact; original HTML sources stay visibly paired with local static and animated SVG interpretations; and native examples and skill-ledger rows expose the work and methods without a marketplace layer.
+Catalog utility stays practical inside that expression. One collection control and one Expanded/Compact control remain persistent and compact; original HTML sources stay visibly paired with local static and animated SVG interpretations; and first-party examples and skill-ledger rows expose the work and methods without a marketplace layer.
 
 **Key Characteristics:**
 
@@ -346,7 +346,7 @@ The Catalog header is a thin Ink rail. Its geometric wordmark uses two Paper blo
 
 ### Catalog Controls
 
-The controls form one persistent utility rail rather than a floating filter card. Four collection segments—All, References, Hi-fi mockups, and Skills—show a label and tabular count; the selected segment turns Action Green with Working Ink text. The separate presentation group changes Expanded/Compact, while Static/Animated appears only when SVG references are visible. Because segmented wrappers clip overflow, focus uses a 2px inset outline with a -3px offset: Bright Paper on inactive Ink controls and Working Ink on active Green or Lilac segments. At 820px the groups stack with presentation before SVG preview; at 540px counts disappear before labels compress and the rail stops sticking.
+The controls form one persistent utility rail rather than a floating filter card. Four collection segments—All, References, Wireframes & mockups, and Skills—show a label and tabular count; the selected segment turns Action Green with Working Ink text. The separate presentation group changes Expanded/Compact, while Static/Animated appears whenever the visible collection includes SVG previews and defaults to Animated. Because segmented wrappers clip overflow, focus uses a 2px inset outline with a -3px offset: Bright Paper on inactive Ink controls and Working Ink on active Green or Lilac segments. At 820px the groups stack with presentation before SVG preview; at 540px counts disappear before labels compress and the rail stops sticking.
 
 ### Artifact Links
 

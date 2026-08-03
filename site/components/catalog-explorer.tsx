@@ -8,6 +8,7 @@ import {
   nativeExamples,
   type CatalogArtifact,
   type CatalogCategory,
+  type NativeExample,
 } from "@/lib/catalog-data";
 import { FeaturedSequence } from "@/components/featured-sequence";
 import {
@@ -28,7 +29,7 @@ import { useEffect, useState } from "react";
 import { flushSync } from "react-dom";
 import styles from "./catalog-explorer.module.css";
 
-type CollectionFilter = "all" | "pairs" | "mockups" | "skills";
+type CollectionFilter = "all" | "pairs" | "design" | "skills";
 type CatalogView = "expanded" | "compact";
 type PreviewMode = "static" | "animated";
 
@@ -36,8 +37,8 @@ type ViewTransitionDocument = Document & {
   startViewTransition?: (update: () => void) => unknown;
 };
 
-const highFidelityMockups = nativeExamples.filter((example) =>
-  example.mode.startsWith("Interface study"),
+const wireframesAndMockups = nativeExamples.filter(
+  (example) => example.stage !== "Prototype",
 );
 
 const collectionOptions: Array<{
@@ -52,9 +53,9 @@ const collectionOptions: Array<{
   },
   { id: "pairs", label: "References", count: 20 },
   {
-    id: "mockups",
-    label: "Hi-fi mockups",
-    count: highFidelityMockups.length,
+    id: "design",
+    label: "Wireframes & mockups",
+    count: wireframesAndMockups.length,
   },
   { id: "skills", label: "Skills", count: catalogSkills.length },
 ];
@@ -65,7 +66,8 @@ const catalogCategoryIds = new Set<string>(
 );
 
 function parseCollection(value: string | null): CollectionFilter {
-  return value === "pairs" || value === "mockups" || value === "skills"
+  if (value === "mockups") return "design";
+  return value === "pairs" || value === "design" || value === "skills"
     ? value
     : "all";
 }
@@ -184,6 +186,57 @@ function CategoryBand({
   );
 }
 
+function NativeExampleCard({
+  example,
+  previewMode,
+}: {
+  example: NativeExample;
+  previewMode: PreviewMode;
+}) {
+  const activePreview =
+    previewMode === "animated" && example.animatedSvg
+      ? example.animatedSvg
+      : previewMode === "static" && example.staticSvg
+        ? example.staticSvg
+        : example.screenshot;
+  const usesSvgPreview = activePreview.endsWith(".svg");
+
+  return (
+    <article className={styles.nativeExample}>
+      <Link className={styles.nativePreview} href={example.liveUrl}>
+        <Image
+          src={activePreview}
+          alt={`${previewMode === "animated" && example.animatedSvg ? "Animated preview" : "Preview"} of ${example.title}`}
+          width={usesSvgPreview ? 640 : example.screenshotWidth}
+          height={usesSvgPreview ? 400 : example.screenshotHeight}
+          unoptimized={usesSvgPreview}
+        />
+      </Link>
+      <div className={styles.nativeCopy}>
+        <span>
+          {example.stage} · {example.mode}
+        </span>
+        <h3>{example.title}</h3>
+        <p>{example.description}</p>
+        <div>
+          <Link href={example.liveUrl}>
+            Open live HTML
+            <ArrowUpRight aria-hidden="true" />
+          </Link>
+          <a href={example.sourceUrl} target="_blank" rel="noreferrer">
+            Source HTML
+            <FileCode2 aria-hidden="true" />
+          </a>
+          <Link href={example.guideUrl}>
+            Guide
+            <ArrowRight aria-hidden="true" />
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 export function CatalogExplorer() {
   const [collection, setCollection] = useState<CollectionFilter>("all");
   const [previewMode, setPreviewMode] = useState<PreviewMode>("animated");
@@ -263,22 +316,22 @@ export function CatalogExplorer() {
   }, [collection, pendingAnchor]);
 
   const visibleArtifacts =
-    collection === "mockups" || collection === "skills"
+    collection === "design" || collection === "skills"
       ? []
       : catalogArtifacts;
 
   const visibleNativeExamples =
     collection === "pairs" || collection === "skills"
       ? []
-      : collection === "mockups"
-        ? highFidelityMockups
+      : collection === "design"
+        ? wireframesAndMockups
         : nativeExamples;
 
   const featuredSequenceVisible =
     collection === "all";
 
   const visibleSkills =
-    collection === "pairs" || collection === "mockups"
+    collection === "pairs" || collection === "design"
       ? []
       : catalogSkills;
 
@@ -368,7 +421,7 @@ export function CatalogExplorer() {
       <section className={styles.catalogControls} aria-label="Catalog filters">
         <div
           className={`${styles.controlsInner} ${
-            collection === "mockups" || collection === "skills"
+            collection === "skills"
               ? styles.controlsInnerWithoutPreview
               : ""
           }`}
@@ -387,7 +440,9 @@ export function CatalogExplorer() {
             ))}
           </div>
 
-          {(collection === "all" || collection === "pairs") && (
+          {(collection === "all" ||
+            collection === "pairs" ||
+            collection === "design") && (
             <div
               className={styles.previewToggle}
               role="group"
@@ -471,43 +526,23 @@ export function CatalogExplorer() {
           >
             <header className={styles.sectionIntro}>
               <h2>
-                {collection === "mockups"
-                  ? "High-fidelity product mockups."
+                {collection === "design"
+                  ? "Wireframes and mockups."
                   : "Built here, open in place."}
               </h2>
               <p>
-                {collection === "mockups"
-                  ? "Three responsive, interactive HTML studies that borrow the information density and interaction grammar of familiar products."
-                  : "Agents can build high-fidelity HTML alternatives that match the real product. Open them at realistic screen sizes, try the interactions, and compare possible changes before touching production."}
+                {collection === "design"
+                  ? "Open the HTML, resize it, and inspect the source."
+                  : "First-party wireframes, mockups, prototypes, and interface studies. Open the HTML, resize it, and inspect the source."}
               </p>
             </header>
             <div className={styles.nativeExamples}>
               {visibleNativeExamples.map((example) => (
-                <article className={styles.nativeExample} key={example.id}>
-                  <Link className={styles.nativePreview} href={example.liveUrl}>
-                    <Image
-                      src={example.screenshot}
-                      alt={`Screenshot of ${example.title}`}
-                      width={example.screenshotWidth}
-                      height={example.screenshotHeight}
-                    />
-                  </Link>
-                  <div className={styles.nativeCopy}>
-                    <span>{example.mode}</span>
-                    <h3>{example.title}</h3>
-                    <p>{example.description}</p>
-                    <div>
-                      <Link href={example.liveUrl}>
-                        Open live HTML
-                        <ArrowUpRight aria-hidden="true" />
-                      </Link>
-                      <Link href={example.guideUrl}>
-                        Read the guide
-                        <ArrowRight aria-hidden="true" />
-                      </Link>
-                    </div>
-                  </div>
-                </article>
+                <NativeExampleCard
+                  example={example}
+                  key={example.id}
+                  previewMode={previewMode}
+                />
               ))}
             </div>
           </section>
@@ -522,7 +557,7 @@ export function CatalogExplorer() {
             <header className={styles.sectionIntro}>
               <h2>The methods behind the artifacts.</h2>
               <p>
-                Five focused skills turn a broad request into an artifact with
+                Six focused skills turn a broad request into an artifact with
                 the right fidelity, behavior, and verification boundary.
               </p>
             </header>

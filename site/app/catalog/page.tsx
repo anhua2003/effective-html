@@ -141,9 +141,9 @@ export default function CatalogPage() {
             The twenty reference examples accompany Thariq Shihipar’s essay on
             using HTML to stay engaged with agent work. Effective SVG reinterprets
             those same subjects as static and animated vector artifacts. The
-            native collection adds the featured request-path explorer, two
-            release-readiness studies, and three unaffiliated product-interface
-            studies built with synthetic data.
+            first-party collection adds the request-path explorer, the
+            release-readiness pair, three new wireframe-and-mockup pairs, and
+            three product-interface studies built with synthetic data.
           </p>
         </div>
         <div className={styles.sourceLinks}>

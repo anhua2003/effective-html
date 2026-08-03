@@ -38,13 +38,17 @@ export type NativeExample = {
   id: string;
   category: CatalogCategoryId;
   title: string;
+  stage: "Wireframe" | "Mockup" | "Prototype";
   mode: string;
   description: string;
   screenshot: string;
   screenshotWidth: number;
   screenshotHeight: number;
+  staticSvg?: string;
+  animatedSvg?: string;
   liveUrl: string;
   guideUrl: string;
+  sourceUrl: string;
 };
 
 /** A first-party HTML artifact with media that previews, but does not replace, the live work. */
@@ -414,6 +418,7 @@ export const nativeExamples: NativeExample[] = [
     id: "release-readiness-wireframe",
     category: "exploration",
     title: "Release readiness wireframe",
+    stage: "Wireframe",
     mode: "Structure",
     description:
       "Three deliberately unfinished directions for deciding hierarchy, evidence, navigation, and responsive structure.",
@@ -422,11 +427,14 @@ export const nativeExamples: NativeExample[] = [
     screenshotHeight: 1000,
     liveUrl: "/examples/release-readiness/wireframe.html",
     guideUrl: "/docs/wireframes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/examples/release-readiness/wireframe.html",
   },
   {
     id: "release-readiness-prototype",
     category: "prototyping",
     title: "Release readiness prototype",
+    stage: "Prototype",
     mode: "Behavior",
     description:
       "A working blocked-to-ready flow with validation, status changes, recovery, keyboard support, and mobile behavior.",
@@ -435,11 +443,140 @@ export const nativeExamples: NativeExample[] = [
     screenshotHeight: 1428,
     liveUrl: "/examples/release-readiness/prototype.html",
     guideUrl: "/docs/prototypes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/examples/release-readiness/prototype.html",
+  },
+  {
+    id: "effective-html-compare-wireframe",
+    category: "exploration",
+    title: "Effective HTML comparison wireframe",
+    stage: "Wireframe",
+    mode: "Three directions · low fidelity",
+    description:
+      "Three ways to organize the same artifact catalog, kept rough so the hierarchy and browsing model are the decision.",
+    screenshot:
+      "/examples/product-design/screenshots/effective-html-compare-wireframe.png",
+    screenshotWidth: 1440,
+    screenshotHeight: 900,
+    staticSvg:
+      "/examples/product-design/previews/static/effective-html-compare-wireframe.svg",
+    animatedSvg:
+      "/examples/product-design/previews/animated/effective-html-compare-wireframe.svg",
+    liveUrl: "/examples/product-design/effective-html-compare-wireframe.html",
+    guideUrl: "/docs/wireframes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-design/effective-html-compare-wireframe.html",
+  },
+  {
+    id: "effective-html-compare-mockup",
+    category: "prototyping",
+    title: "Effective HTML catalog mockup",
+    stage: "Mockup",
+    mode: "Chosen direction · branded",
+    description:
+      "The same catalog decision carried into the Effective HTML visual system, with working density and responsive controls.",
+    screenshot:
+      "/examples/product-design/screenshots/effective-html-compare-mockup.png",
+    screenshotWidth: 1440,
+    screenshotHeight: 900,
+    staticSvg:
+      "/examples/product-design/previews/static/effective-html-compare-mockup.svg",
+    animatedSvg:
+      "/examples/product-design/previews/animated/effective-html-compare-mockup.svg",
+    liveUrl: "/examples/product-design/effective-html-compare-mockup.html",
+    guideUrl: "/docs/designing-artifacts",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-design/effective-html-compare-mockup.html",
+  },
+  {
+    id: "plannotator-review-wireframe",
+    category: "review",
+    title: "Plannotator review wireframe",
+    stage: "Wireframe",
+    mode: "Review structure · low fidelity",
+    description:
+      "A rough review workspace for testing the balance between the document, annotation tools, comments, and approval actions.",
+    screenshot:
+      "/examples/product-design/screenshots/plannotator-review-wireframe.png",
+    screenshotWidth: 1440,
+    screenshotHeight: 900,
+    staticSvg:
+      "/examples/product-design/previews/static/plannotator-review-wireframe.svg",
+    animatedSvg:
+      "/examples/product-design/previews/animated/plannotator-review-wireframe.svg",
+    liveUrl: "/examples/product-design/plannotator-review-wireframe.html",
+    guideUrl: "/docs/wireframes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-design/plannotator-review-wireframe.html",
+  },
+  {
+    id: "plannotator-review-mockup",
+    category: "review",
+    title: "Plannotator review mockup",
+    stage: "Mockup",
+    mode: "Product-aligned · interactive",
+    description:
+      "A product-specific review surface using Plannotator’s dark shell, annotation language, and approval flow without copying a screenshot.",
+    screenshot:
+      "/examples/product-design/screenshots/plannotator-review-mockup.png",
+    screenshotWidth: 1440,
+    screenshotHeight: 900,
+    staticSvg:
+      "/examples/product-design/previews/static/plannotator-review-mockup.svg",
+    animatedSvg:
+      "/examples/product-design/previews/animated/plannotator-review-mockup.svg",
+    liveUrl: "/examples/product-design/plannotator-review-mockup.html",
+    guideUrl: "/docs/designing-artifacts",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-design/plannotator-review-mockup.html",
+  },
+  {
+    id: "product-change-review-wireframe",
+    category: "exploration",
+    title: "Product change review wireframe",
+    stage: "Wireframe",
+    mode: "Current and proposed · low fidelity",
+    description:
+      "A rough side-by-side review that keeps the current state, proposed change, and unresolved questions in one frame.",
+    screenshot:
+      "/examples/product-design/screenshots/product-change-review-wireframe.png",
+    screenshotWidth: 1440,
+    screenshotHeight: 900,
+    staticSvg:
+      "/examples/product-design/previews/static/product-change-review-wireframe.svg",
+    animatedSvg:
+      "/examples/product-design/previews/animated/product-change-review-wireframe.svg",
+    liveUrl: "/examples/product-design/product-change-review-wireframe.html",
+    guideUrl: "/docs/wireframes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-design/product-change-review-wireframe.html",
+  },
+  {
+    id: "product-change-review-mockup",
+    category: "prototyping",
+    title: "Product change review mockup",
+    stage: "Mockup",
+    mode: "Decision artifact · interactive",
+    description:
+      "A vivid review artifact for comparing a product change, changing the viewport, and recording a direction before implementation.",
+    screenshot:
+      "/examples/product-design/screenshots/product-change-review-mockup.png",
+    screenshotWidth: 1440,
+    screenshotHeight: 900,
+    staticSvg:
+      "/examples/product-design/previews/static/product-change-review-mockup.svg",
+    animatedSvg:
+      "/examples/product-design/previews/animated/product-change-review-mockup.svg",
+    liveUrl: "/examples/product-design/product-change-review-mockup.html",
+    guideUrl: "/docs/designing-artifacts",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-design/product-change-review-mockup.html",
   },
   {
     id: "linear-issue-workspace",
     category: "prototyping",
     title: "Linear issue workspace",
+    stage: "Mockup",
     mode: "Interface study · Linear",
     description:
       "A calm, dense issue workspace with active and backlog filters, keyboard-ready rows, and a focused issue detail rail.",
@@ -448,11 +585,14 @@ export const nativeExamples: NativeExample[] = [
     screenshotHeight: 900,
     liveUrl: "/examples/product-studies/linear-issue-workspace.html",
     guideUrl: "/docs/prototypes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-studies/linear-issue-workspace.html",
   },
   {
     id: "notion-project-space",
     category: "prototyping",
     title: "Notion project space",
+    stage: "Mockup",
     mode: "Interface study · Notion",
     description:
       "A connected project document that keeps strategy, properties, tasks, progress, and a timeline in one navigable surface.",
@@ -461,11 +601,14 @@ export const nativeExamples: NativeExample[] = [
     screenshotHeight: 900,
     liveUrl: "/examples/product-studies/notion-project-space.html",
     guideUrl: "/docs/prototypes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-studies/notion-project-space.html",
   },
   {
     id: "vercel-deployment-dashboard",
     category: "prototyping",
     title: "Vercel deployment ledger",
+    stage: "Mockup",
     mode: "Interface study · Vercel",
     description:
       "A chronological deployment ledger with environment filters, expandable build evidence, and explicit promotion actions.",
@@ -474,6 +617,8 @@ export const nativeExamples: NativeExample[] = [
     screenshotHeight: 900,
     liveUrl: "/examples/product-studies/vercel-deployment-dashboard.html",
     guideUrl: "/docs/prototypes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-studies/vercel-deployment-dashboard.html",
   },
 ];
 
