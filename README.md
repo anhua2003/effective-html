@@ -93,37 +93,6 @@ The skills separate creative freedom from reliability:
 
 Detailed guidance lives only where it is needed. The broad `html` skill routes the work, `design-artifact` supplies optional creative direction, and specialist skills own fidelity and behavior. Each skill remains independently usable.
 
-## Repository shape
-
-```text
-skills/
-├── html/
-│   ├── SKILL.md
-│   ├── agents/openai.yaml
-│   └── references/
-├── design-artifact/
-├── html-wireframe/
-├── html-prototype/
-├── html-plan/
-└── html-diagram/
-
-examples/
-└── release-readiness/
-    ├── brief.md
-    ├── states.md
-    ├── wireframe.html
-    ├── prototype.html
-    └── screenshots/
-
-site/
-├── app/          # Next.js routes
-├── content/docs/ # Fumadocs guide
-└── public/       # Deployed catalog artifacts
-```
-
-The installable skills and their examples stay at the repository root. The
-website is isolated under `site/` and deployed from that directory.
-
 This project was inspired by Thariq Shihipar's [The unreasonable effectiveness of HTML](https://thariqs.github.io/html-effectiveness).
 
 <p align="center">
