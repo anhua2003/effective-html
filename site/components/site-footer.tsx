@@ -42,7 +42,7 @@ export function SiteFooter() {
           target="_blank"
           rel="noreferrer"
         >
-          Visual Explainer by Nico Bailon
+          Visual Explainer
         </a>
       </nav>
     </footer>
