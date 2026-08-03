@@ -37,6 +37,13 @@ export function SiteFooter() {
         >
           Original HTML gallery
         </a>
+        <a
+          href="https://github.com/nicobailon/visual-explainer"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Visual Explainer by Nico Bailon
+        </a>
       </nav>
     </footer>
   );

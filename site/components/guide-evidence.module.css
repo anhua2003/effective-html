@@ -200,6 +200,15 @@
   background: var(--lilac);
 }
 
+.sources :global(a:last-child:nth-child(odd)) {
+  grid-column: 1 / -1;
+}
+
+.sources :global(a:nth-child(5))::before {
+  border-radius: 50%;
+  background: var(--pink);
+}
+
 .sources :global(a)::after {
   width: 1rem;
   height: 1rem;
@@ -675,6 +684,10 @@
     grid-template-columns: 1fr;
     column-gap: 0;
     margin-block: 1rem 2.25rem;
+  }
+
+  .sources :global(a:last-child:nth-child(odd)) {
+    grid-column: auto;
   }
 }
 
