@@ -415,38 +415,6 @@ export const catalogArtifacts: CatalogArtifact[] = [
 
 export const nativeExamples: NativeExample[] = [
   {
-    id: "release-readiness-wireframe",
-    category: "exploration",
-    title: "Release readiness wireframe",
-    stage: "Wireframe",
-    mode: "Structure",
-    description:
-      "Three deliberately unfinished directions for deciding hierarchy, evidence, navigation, and responsive structure.",
-    screenshot: "/examples/release-readiness/wireframe-desktop.png",
-    screenshotWidth: 1440,
-    screenshotHeight: 1000,
-    liveUrl: "/examples/release-readiness/wireframe.html",
-    guideUrl: "/docs/wireframes",
-    sourceUrl:
-      "https://github.com/plannotator/effective-html/blob/main/examples/release-readiness/wireframe.html",
-  },
-  {
-    id: "release-readiness-prototype",
-    category: "prototyping",
-    title: "Release readiness prototype",
-    stage: "Prototype",
-    mode: "Behavior",
-    description:
-      "A working blocked-to-ready flow with validation, status changes, recovery, keyboard support, and mobile behavior.",
-    screenshot: "/examples/release-readiness/prototype-desktop.png",
-    screenshotWidth: 1440,
-    screenshotHeight: 1428,
-    liveUrl: "/examples/release-readiness/prototype.html",
-    guideUrl: "/docs/prototypes",
-    sourceUrl:
-      "https://github.com/plannotator/effective-html/blob/main/examples/release-readiness/prototype.html",
-  },
-  {
     id: "effective-html-compare-wireframe",
     category: "exploration",
     title: "Effective HTML comparison wireframe",
@@ -571,6 +539,38 @@ export const nativeExamples: NativeExample[] = [
     guideUrl: "/docs/designing-artifacts",
     sourceUrl:
       "https://github.com/plannotator/effective-html/blob/main/site/public/examples/product-design/product-change-review-mockup.html",
+  },
+  {
+    id: "release-readiness-wireframe",
+    category: "exploration",
+    title: "Release readiness wireframe",
+    stage: "Wireframe",
+    mode: "Structure",
+    description:
+      "Three deliberately unfinished directions for deciding hierarchy, evidence, navigation, and responsive structure.",
+    screenshot: "/examples/release-readiness/wireframe-desktop.png",
+    screenshotWidth: 1440,
+    screenshotHeight: 1000,
+    liveUrl: "/examples/release-readiness/wireframe.html",
+    guideUrl: "/docs/wireframes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/examples/release-readiness/wireframe.html",
+  },
+  {
+    id: "release-readiness-prototype",
+    category: "prototyping",
+    title: "Release readiness prototype",
+    stage: "Prototype",
+    mode: "Behavior",
+    description:
+      "A working blocked-to-ready flow with validation, status changes, recovery, keyboard support, and mobile behavior.",
+    screenshot: "/examples/release-readiness/prototype-desktop.png",
+    screenshotWidth: 1440,
+    screenshotHeight: 1428,
+    liveUrl: "/examples/release-readiness/prototype.html",
+    guideUrl: "/docs/prototypes",
+    sourceUrl:
+      "https://github.com/plannotator/effective-html/blob/main/examples/release-readiness/prototype.html",
   },
   {
     id: "linear-issue-workspace",
