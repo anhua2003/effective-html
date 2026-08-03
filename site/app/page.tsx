@@ -66,7 +66,7 @@ export default function HomePage() {
                 <span>Plannotator</span>
               </a>
             </p>
-            <h2>HTML for thinking with agents.</h2>
+            <h2>Visual context for product development.</h2>
             <p className="hero-intro">
               A reference site showcasing the visual and interactive HTML
               artifacts you can create with agents.
