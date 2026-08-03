@@ -1,45 +1,29 @@
 ---
 title: Decks
-description: Build a browser-native presentation whose sequence carries the story.
+description: Build browser-native slide decks with interaction, animation, keyboard navigation, and easy sharing.
 ---
 
-A deck is useful when the order and pace of the explanation matter. HTML makes
-the presentation directly inspectable, interactive, and shareable without
-turning it into a long scrolling page.
+A browser-native deck is a slide presentation made with HTML. It can include
+interaction, animation, live examples, and links while remaining easy to open
+and share.
 
-## Give each slide one job
+## What HTML adds
 
-Write the sequence before styling it. Each slide should introduce one idea,
-comparison, transition, or piece of evidence. Remove slides that merely repeat
-the speaker, and split slides that ask the audience to parse several arguments
-at once.
+HTML decks can respond to input, reveal a sequence, run a small demo, or show
+live data. They can also be inspected and changed with the same tools used for
+other web artifacts.
 
-## Use a fixed stage
+## Keep it usable as a presentation
 
-Choose one presentation canvas, usually 16:9, and scale that stage to the
-available viewport. Test the smallest display on which the deck must remain
-readable. Treat the slide as a composition rather than a responsive webpage
-whose elements continuously reflow.
+A deck still needs readable slides, dependable arrow-key navigation, visible
+progress, and a layout that fits the screen. A fixed 16:9 stage is usually
+simpler than treating every slide like a responsive webpage.
 
-## Keep navigation dependable
+## Use motion when it helps
 
-Support visible controls and familiar keys. Arrow keys should move through the
-sequence; progress and the current position should remain clear. Preserve
-focus, provide a reduced-motion path, and make full-screen mode optional rather
-than required.
-
-## Use motion to reveal structure
-
-Animation should clarify sequence, comparison, or change. Prefer a few staged
-reveals over constant movement. The deck must still communicate when motion is
-disabled or when it is exported as static pages.
-
-## Package the presentation as an artifact
-
-Keep the deck easy to open and share. A self-contained HTML file is often the
-simplest boundary. If it depends on local media, keep the folder portable and
-make the entry point obvious. Verify keyboard navigation, overflow, external
-links, and static export before presenting.
+Animation is useful for sequence, comparison, and change. It should not be
+required to understand the slide, and the deck should respect reduced-motion
+settings.
 
 <GuideHandoff
   artifactHref="https://thariqs.github.io/html-effectiveness/09-slide-deck.html"
@@ -47,14 +31,14 @@ links, and static export before presenting.
   artifactDescription="Inspect a concise browser-native presentation from The unreasonable effectiveness of HTML."
   sourceHref="https://github.com/zarazhangrui/frontend-slides"
   sourceLabel="Study Frontend Slides"
-  sourceDescription="See a complete agent workflow for style discovery, navigation, animation, and export."
+  sourceDescription="See how Frontend Slides handles design, navigation, animation, and export."
   skillHref="https://github.com/zarazhangrui/frontend-slides/blob/main/SKILL.md"
   skillLabel="Read the deck skill"
-  skillDescription="Use its implementation rules when a presentation needs more than a one-off example."
+  skillDescription="Read Frontend Slides' guidance for building HTML presentations."
 />
 
 <GuideNext
   href="/docs/plans"
-  title="Keep implementation work source-grounded"
-  description="Use HTML for a plan only when spatial or interactive structure adds leverage."
+  title="Plans"
+  description="See when a plan benefits from visual or interactive structure."
 />

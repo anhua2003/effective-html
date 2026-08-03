@@ -1,13 +1,14 @@
 ---
 title: Diagrams
-description: Choose a visual model that matches the relationship being explained.
+description: Use HTML diagrams to explain architecture, sequences, state, hierarchy, and flow.
 ---
 
-Diagrams are strongest when their geometry carries an exact relationship.
+Diagrams make relationships easier to see. HTML diagrams can also animate a
+sequence, reveal detail, or let someone select a path through a larger system.
 
 <GuideChapterEvidence chapter="diagrams" />
 
-## Begin with the relationship
+## Common diagram types
 
 - Use a **sequence** when order and handoff matter.
 - Use a **state model** when transitions and conditions matter.
@@ -18,35 +19,24 @@ Diagrams are strongest when their geometry carries an exact relationship.
 
 Do not force every subject into a generic left-to-right process.
 
-## Keep the visual grammar small
+## Keep it readable
 
-Define what shapes, lines, color, and annotations mean, then reuse that grammar
-consistently. If a visual distinction does not encode information, remove it.
-
-## Make labels do real work
-
-Use short, concrete labels. Keep explanatory prose outside the dense part of
-the diagram. A reader should be able to identify the system boundary, the
-important relationship, and the exceptional path without decoding a legend of
-decorations.
-
-## Verify the rendered result
-
-Inspect the diagram at its intended size. Check line crossings, label
-collisions, small text, contrast, and the reading order at narrow widths.
+Use a small set of shapes, lines, colors, and labels consistently. Keep dense
+explanation outside the diagram, and check that labels and paths remain legible
+at the size people will actually view it.
 
 <GuideHandoff
   artifactHref="/catalog/featured/workspaces-architecture.html"
   artifactLabel="Open the request-path explorer"
-  artifactDescription="Select flows and inspect how the full architecture responds."
+  artifactDescription="Choose a request and watch its path through the architecture."
   sourceHref="https://github.com/plannotator/effective-html/blob/main/public/catalog/featured/workspaces-architecture.html"
   skillHref="https://github.com/plannotator/effective-html/blob/main/skills/html-diagram/SKILL.md"
   skillLabel="Use the diagram skill"
-  skillDescription="Match the visual model to the relationship being explained."
+  skillDescription="Create an HTML diagram that fits the subject."
 />
 
 <GuideNext
   href="/docs/decks"
-  title="Tell the story as a sequence"
-  description="Use a browser-native deck when pacing and progression carry the explanation."
+  title="Decks"
+  description="See how a browser-native presentation can combine slides, interaction, and motion."
 />

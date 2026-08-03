@@ -1,57 +1,40 @@
 ---
 title: Prototypes
-description: Test a credible flow and the states that could change the decision.
+description: Use interactive HTML prototypes to try product flows, behavior, and states.
 ---
 
-A prototype is useful when static appearance cannot answer the question.
+A prototype lets you try part of an app before building or changing the real
+product. An agent can make a self-contained HTML prototype with realistic
+content and enough behavior to show how the flow works.
 
 <GuideChapterEvidence chapter="prototypes" />
 
-## Build the narrowest credible flow
+## What a prototype can show
 
-Choose one path that represents the product decision. Give it realistic inputs,
-feedback, and transitions. Avoid building unrelated screens simply to make the
-artifact feel complete.
+- a multi-step flow;
+- loading, empty, error, and success states;
+- validation and feedback;
+- keyboard and mobile behavior;
+- transitions between views or modes.
 
-## Include the relevant states
+## It does not need to be the whole product
 
-The important states depend on the flow, but commonly include:
-
-- loading or pending work;
-- empty content;
-- validation failure;
-- recoverable error;
-- disabled controls;
-- successful completion;
-- keyboard focus and navigation.
-
-Implement states because they affect the judgment, not to satisfy a checklist
-detached from the product.
-
-## Preserve the product boundary
-
-A prototype should make clear what it is demonstrating and what remains
-illustrative. It should not imply a backend, permission model, or capability
-that has not been established.
-
-## Verify it as an interface
-
-Test the prototype at desktop and mobile sizes. Use the keyboard. Confirm
-labels, focus, contrast, and recovery. A broken demonstration creates false
-confidence.
+A useful prototype can cover one important path and the states around it. It
+does not need a backend, every screen, or every edge case. It should be clear
+which parts work and which parts are only visual.
 
 <GuideHandoff
   artifactHref="/examples/release-readiness/prototype.html"
   artifactLabel="Open the live prototype"
-  artifactDescription="Exercise the complete flow outside the embedded evidence frame."
+  artifactDescription="Try the release-readiness flow."
   sourceHref="https://github.com/plannotator/effective-html/tree/main/examples/release-readiness"
   skillHref="https://github.com/plannotator/effective-html/blob/main/skills/html-prototype/SKILL.md"
   skillLabel="Use the prototype skill"
-  skillDescription="Build one credible path and the states that can change the decision."
+  skillDescription="Create a working HTML prototype from a brief."
 />
 
 <GuideNext
   href="/docs/diagrams"
-  title="Make relationships visible"
-  description="Choose a diagram when geometry carries the hard part of the explanation."
+  title="Diagrams"
+  description="See how HTML can explain architecture, sequence, state, and flow."
 />
