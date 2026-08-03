@@ -144,7 +144,7 @@ export default function HomePage() {
 
       <section className="catalog-ink why-html">
         <div className="why-statement">
-          <h2>Use HTML when the thing itself carries the explanation.</h2>
+          <h2>Use HTML when there’s a lot to understand.</h2>
           <p>
             Markdown is often enough. HTML becomes useful when a reader needs
             to compare structure, manipulate state, inspect relationships, or
