@@ -88,7 +88,7 @@ export default function HomePage() {
 
       <section className="catalog-paper artifact-catalog">
         <div className="section-heading">
-          <h2>Visuals for the work of building products.</h2>
+          <h2>What you can make with HTML.</h2>
           <p>
             Use HTML to compare options, explain systems, test interactions,
             and plan implementation.
