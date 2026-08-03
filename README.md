@@ -8,17 +8,14 @@ Focused agent skills for creating useful, self-contained HTML artifacts, from lo
 
 ## Fat artifacts + fat context
 
-A **fat artifact** carries the working detail: structure, visuals, states,
-interactions, annotations, and evidence. **Fat context** gives the agent the
-source material it needs to understand the real problem: the brief, code,
-constraints, examples, and accepted decisions. The prompt and skills can stay
-thin because the context and the artifact do the work.
+Modern models can do a lot. Give them plenty of useful references and use
+artifacts to show what you mean. HTML can visualize almost anything, often more
+clearly than a wall of text.
 
 > [!NOTE]
 > You can use this repo without installing anything. Treat it as a reference
-> first and an installable skill collection second. Read the patterns, borrow
-> what fits, and ask your agent for the artifact directly. Install a skill only
-> when you want a recurring workflow or shared defaults. Visit <a href="https://www.effectivehtml.com/">Effective HTML Website/Guide</a> for more details.
+> first and an installable skill collection second. See the
+> [Effective HTML guide](https://www.effectivehtml.com/).
 
 https://github.com/user-attachments/assets/24306977-7f30-44c9-9bff-55f901d557b0
 
